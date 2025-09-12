@@ -1,129 +1,148 @@
+/* === Global Dark Mode === */
 body {
-  font-family: sans-serif;
-  background: #f5f5f7;
-  color: #111;
-  text-align: center;
-  padding: 20px;
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial, sans-serif;
+  margin: 0;
+  background-color: #0d1117; /* dunkles Grau */
+  color: #e6edf3; /* fast weiß */
 }
-a {
-  color: #0071e3;
+
+/* Navbar */
+.navbar {
+  background: #161b22;
+  border-bottom: 1px solid #30363d;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0.8rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-weight: 700;
+  font-size: 1.2rem;
+  color: #58a6ff;
   text-decoration: none;
-  font-weight: bold;
 }
-a:hover {
+
+nav a {
+  color: #c9d1d9;
+  text-decoration: none;
+  margin-left: 1rem;
+  font-weight: 600;
+}
+
+nav a:hover {
+  color: #58a6ff;
   text-decoration: underline;
 }
 
-/* Buttons */
+/* Main Layout */
+main {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 1rem;
+}
+
+/* === Hero Section mit Matrix === */
+.hero {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 10px;
+  background: #0d1117;
+}
+
+#matrixCanvas {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  background: #0d1117;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  color: #58a6ff;
+  text-align: center;
+  text-shadow: 0 0 5px rgba(0, 255, 0, 0.7);
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  margin: 0.5rem 0 1rem;
+}
+
+/* === Buttons === */
 .btn {
-  display: inline-block;
+  background: #58a6ff;
+  color: #0d1117;
   padding: 10px 20px;
-  background: #0071e3;
-  color: white;
   border-radius: 20px;
   text-decoration: none;
-  margin: 0 5px;
-  font-weight: 600;
-  transition: background 0.2s;
+  font-weight: bold;
+  transition: background 0.2s, transform 0.2s;
 }
 
 .btn:hover {
-  background: #005bb5;
+  background: #1f6feb;
+  transform: translateY(-2px);
 }
 
-.btn.outline {
-  background: transparent;
-  border: 2px solid #0071e3;
-  color: #0071e3;
+/* === Projektkarten === */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 
-.btn.outline:hover {
-  background: #0071e3;
-  color: white;
-}
-
-/* Hero Section */
-.hero {
-  position: relative;
-  text-align: center;
-}
-
-.hero-img {
-  width: 100%;
-  height: auto;
-  display: block;
-  filter: brightness(0.8);
+.card {
+  background: #161b22;
+  border: 1px solid #30363d;
+  color: #e6edf3;
+  padding: 1.5rem;
   border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.4);
+  text-align: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
+.card h2 {
+  margin-top: 0;
+  color: #58a6ff;
 }
 
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin-bottom: 0.5rem;
+.card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.6);
 }
 
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
-
-/* --- Layout Fix --- */
-.navbar {
-  background: white;
+/* Footer */
+footer {
+  text-align: center;
   padding: 1rem;
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  border-bottom: 1px solid #ddd;
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 1000;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-}
-
-main {
-  margin-top: 5rem;
-}
-
-.hero {
-  position: relative;
-  text-align: center;
-  margin-top: 1rem;
-}
-
-.hero-img {
-  width: 100%;
-  height: 400px;
-  object-fit: cover;
-  border-radius: 10px;
-  filter: brightness(0.75);
-}
-
-.hero-text {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: white;
-  text-shadow: 0 2px 8px rgba(0,0,0,0.7);
-  max-width: 90%;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-}
-
-.hero-text p {
-  font-size: 1.3rem;
-  margin-bottom: 1rem;
+  color: #8b949e;
+  font-size: 0.9rem;
+  border-top: 1px solid #30363d;
+  margin-top: 3rem;
 }

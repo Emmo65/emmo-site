@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title><%= title %></title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <header class="navbar">
+    <div class="nav-container">
+      <a href="/" class="logo">Emmo</a>
+      <nav>
+        <a href="/">Start</a>
+        <a href="/about">Über mich</a>
+        <a href="/project">Projekt</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <%- body %>
+  </main>
+
+  <footer>
+    <p>© <%= new Date().getFullYear() %> Emmo</p>
+  </footer>
+<script src="/js/matrix.js"></script>
+ </body>
+</html>
+
