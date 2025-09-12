@@ -1,0 +1,7 @@
+# Ignore dependencies
+node_modules/
+
+# Optional: ignore logs and temporary files
+npm-debug.log
+.env
+dist/
