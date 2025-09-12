@@ -35,4 +35,5 @@ Clone the repository and install dependencies:
 git clone git@github.com:Emmo65/emmo-site.git
 cd emmo-site
 npm install
+npm run dev
 
