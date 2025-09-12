@@ -1,12 +1,23 @@
 # Emmo Site
 
-A simple Node.js + Express web application created as a learning project.  
-This project demonstrates:
+A **Node.js + Express** learning project with a modern **dark theme** and a **Matrix-style animated hero section**.  
+This project was built entirely via the Linux terminal as a practice exercise for working with:
 
-- Setting up an Express server
-- Using EJS as a template engine
-- Serving static assets (CSS, images)
-- Creating multiple pages (Home, About, Project)
+- Node.js + Express server setup
+- EJS template engine
+- Serving static assets (CSS, JS, images)
+- Building a responsive layout with a sticky navbar, hero section, and project cards
+- Adding custom JavaScript animations (Matrix background effect)
+
+---
+
+## ✨ Features
+
+- 🌑 **Dark Mode** design (GitHub-style)
+- 🎥 **Matrix animation** in the hero section
+- 📦 **Multi-page setup** (Home, About, Projects)
+- 📱 **Responsive layout** for mobile & desktop
+- ⚡ **Nodemon integration** for auto-reload during development
 
 ---
 
@@ -15,6 +26,7 @@ This project demonstrates:
 ### Prerequisites
 - [Node.js](https://nodejs.org) (LTS recommended)
 - npm (comes with Node.js)
+- Git (for cloning)
 
 ### Installation
 Clone the repository and install dependencies:
@@ -23,3 +35,5 @@ Clone the repository and install dependencies:
 git clone git@github.com:Emmo65/emmo-site.git
 cd emmo-site
 npm install
+
+
