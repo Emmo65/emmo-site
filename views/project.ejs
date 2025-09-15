@@ -1,20 +1,19 @@
-<h1><%= title %></h1>
-
-<p style="text-align:center;">Hier sind einige meiner Linux- und Web-Übungen.</p>
-
-<div class="card-grid">
-  <div class="card">
-    <h2>📦 Backup Script</h2>
-    <p>Automatisches tägliches Backup des Home-Verzeichnisses mit Cronjob.</p>
+<%- include('layout', { body: `
+<section class="projects">
+  <h1>🚀 Meine Projekte</h1>
+  <div class="project-grid">
+    <div class="project-card">
+      <h2>Linux Backups</h2>
+      <p>Ein Shell-Skript, das mein Home-Verzeichnis täglich automatisch sichert.</p>
+    </div>
+    <div class="project-card">
+      <h2>Node.js Website</h2>
+      <p>Eine Express + EJS Website, die ich Schritt für Schritt im Terminal gebaut habe.</p>
+    </div>
+    <div class="project-card">
+      <h2>Git & Vercel Deployment</h2>
+      <p>Automatisches Deployment über GitHub Push auf Vercel.</p>
+    </div>
   </div>
-
-  <div class="card">
-    <h2>🌐 Apache HTML Page</h2>
-    <p>Erste HTML-Homepage über Apache2 auf localhost bereitgestellt.</p>
-  </div>
-
-  <div class="card">
-    <h2>🖥 Node.js Express</h2>
-    <p>Express-Server mit EJS-Templates und mehreren Seiten.</p>
-  </div>
-</div>
+</section>
+` }) %>

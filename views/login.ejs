@@ -1,0 +1,23 @@
+<%- include('layout', { body: `
+<section class="login-section">
+  <h1>🔐 Login</h1>
+  <button class="open-login" onclick="openLogin()">Jetzt einloggen</button>
+
+  <!-- Login Modal -->
+  <div id="login-modal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeLogin()">&times;</span>
+      <h2>Willkommen zurück!</h2>
+      <form class="login-form">
+        <label for="username">Benutzername</label>
+        <input type="text" id="username" placeholder="Dein Benutzername" required>
+
+        <label for="password">Passwort</label>
+        <input type="password" id="password" placeholder="••••••••" required>
+
+        <button type="submit">Einloggen</button>
+      </form>
+    </div>
+  </div>
+</section>
+` }) %>

@@ -2,20 +2,22 @@
 <html lang="de">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title><%= title %></title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %> | Emmo</title>
   <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
-  <header class="navbar">
-    <div class="nav-container">
-      <a href="/" class="logo">Emmo</a>
-      <nav>
-        <a href="/">Start</a>
-        <a href="/about">Über mich</a>
-        <a href="/project">Projekt</a>
-      </nav>
-    </div>
+  <header>
+    <nav class="navbar">
+      <div class="logo"><a href="/">EMMO</a></div>
+      <ul class="nav-links">
+        <li><a href="/" class="<%= title === 'Home' ? 'active' : '' %>">Start</a></li>
+        <li><a href="/project" class="<%= title === 'Projects' ? 'active' : '' %>">Projekte</a></li>
+        <li><a href="/about" class="<%= title === 'About' ? 'active' : '' %>">Über mich</a></li>
+        <li><a href="/gallery" class="<%= title === 'Gallery' ? 'active' : '' %>">Galerie</a></li>
+        <li><a href="/login" class="<%= title === 'Login' ? 'active' : '' %>">Login</a></li>
+      </ul>
+    </nav>
   </header>
 
   <main>
@@ -23,9 +25,9 @@
   </main>
 
   <footer>
-    <p>© <%= new Date().getFullYear() %> Emmo</p>
+    <p>© 2025 Emmo</p>
   </footer>
-<script src="/js/matrix.js"></script>
- </body>
-</html>
 
+  <script src="/js/script.js"></script>
+</body>
+</html>

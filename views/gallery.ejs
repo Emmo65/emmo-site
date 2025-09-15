@@ -1,0 +1,32 @@
+<%- include('layout', { body: `
+<section class="gallery">
+  <h1>📷 Meine Galerie</h1>
+  <p class="gallery-intro">Ein paar Eindrücke aus meiner Linux- & Web-Entwicklerwelt.</p>
+
+  <div class="gallery-grid">
+    <div class="gallery-item">
+      <img src="/gallery/1.jpg" alt="Bild 1" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/2.jpg" alt="Bild 2" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/3.jpg" alt="Bild 3" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/4.jpg" alt="Bild 4" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/5.jpg" alt="Bild 5" onclick="openLightbox(this.src)">
+    </div>
+    <div class="gallery-item">
+      <img src="/gallery/6.jpg" alt="Bild 6" onclick="openLightbox(this.src)">
+    </div>
+  </div>
+
+  <!-- Lightbox Overlay -->
+  <div id="lightbox" class="lightbox" onclick="closeLightbox()">
+    <img id="lightbox-img" src="" alt="Großes Bild">
+  </div>
+</section>
+` }) %>

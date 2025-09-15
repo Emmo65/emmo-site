@@ -1,6 +1,28 @@
-<h1><%= title %></h1>
+<%- include('layout', { body: `
+<section class="about">
+  <h1>👨‍💻 Über mich</h1>
+  <p>
+    Mein Name ist Emmo und ich bin ein begeisterter Linux- und Web-Entwickler.
+    Was als einfaches Experiment in einer virtuellen Maschine begann, hat sich zu
+    einem spannenden Lernprojekt entwickelt.
+  </p>
 
-<p><%= content %></p>
+  <p>
+    In meiner Freizeit baue ich gerne kleine Tools und Webseiten, automatisiere
+    wiederkehrende Aufgaben mit Bash-Skripten und experimentiere mit neuen Technologien
+    wie Node.js, GitHub Actions und Vercel Deployments.
+  </p>
 
-<p>Ich interessiere mich für Linux, Server-Administration und Webentwicklung.
-Mein Ziel ist es, Systeme selbst aufzusetzen, zu warten und zu verstehen.</p>
+  <p>
+    Diese Seite dient mir als Labor: Hier probiere ich Dinge aus, teste Deployments,
+    und dokumentiere meine Lernreise. Mein Ziel ist es, immer einen Schritt weiter zu
+    gehen und mein Wissen ständig zu erweitern.
+  </p>
+
+  <p>
+    Neben der Technik interessiere ich mich für Kreativität: Design, Usability
+    und das Zusammenspiel von Code und Ästhetik. Ich liebe es, wenn eine Webseite
+    nicht nur funktioniert, sondern auch <em>gut aussieht</em>.
+  </p>
+</section>
+` }) %>

@@ -1,11 +1,13 @@
+<%- include('layout', { body: `
 <section class="hero">
-  <!-- Matrix Canvas -->
-  <canvas id="matrixCanvas"></canvas>
-
-  <!-- Hero Content -->
-  <div class="hero-content">
-    <h1>Hallo Emmo 👾</h1>
-    <p>Willkommen in meiner dunklen Linux- & Web-Welt.</p>
-    <a href="/project" class="btn">Meine Projekte ansehen</a>
-  </div>
+  <h1>Willkommen, Emmo 👾</h1>
+  <p class="hero-subtitle">Erkunde meine futuristische Linux- & Web-Welt.</p>
+  <button onclick="window.location='/project'">🚀 Meine Projekte</button>
 </section>
+
+<section class="info">
+  <h2>Was dich hier erwartet</h2>
+  <p>Diese Seite ist mein persönlicher Lern- und Experimentierplatz für Linux, Web-Development und Automatisierung.</p>
+  <p>Scrolle durch meine Projekte, schaue in die Galerie oder probiere den Login-Bereich aus!</p>
+</section>
+` }) %>
