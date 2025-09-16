@@ -1,3 +1,11 @@
+/* ==== Body Reset (wichtig) ==== */
+body {
+  display: block !important;
+  margin: 0;
+  padding: 0;
+}
+
+
 .hero {
   text-align: center;
   padding: 4rem 2rem;
@@ -198,18 +206,40 @@ main {
 }
 /* Galerie */
 .gallery-intro {
+  display: block;
   text-align: center;
-  margin-bottom: 2rem;
-  opacity: 0.85;
+  margin: 0 auto 2rem;
+  max-width: 90%;         /* passt sich dynamisch an jede Bildschirmgröße an */
+  word-wrap: break-word;  /* lange Wörter umbrechen */
+  padding: 0.5rem 1rem;   /* Abstand links/rechts für Mobile */
+  opacity: 0.9;
+  line-height: 1.6;
+  font-size: 1.1rem;
 }
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 1.5rem;
   margin: 2rem auto;
   max-width: 1000px;
   padding: 0 1rem;
+}
+
+/* 📱 Tablet & Mobile: 2 Bilder pro Zeile */
+@media (max-width: 768px) {
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+/* 📱 Sehr kleine Geräte: 1 Bild pro Zeile */
+@media (max-width: 480px) {
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
 }
 
 .gallery-item {
@@ -225,14 +255,15 @@ main {
   transition: transform 0.3s ease;
 }
 
-.gallery-item:hover img {
-  transform: scale(1.1);
-}
-
 .gallery-item:hover {
   box-shadow: 0 0 20px rgba(0,255,247,0.5);
   transform: translateY(-5px);
 }
+	
+.gallery-item:hover img {
+  transform: scale(1.1);
+}
+
 /* Projekte */
 .projects {
   text-align: center;
@@ -559,3 +590,12 @@ main {
 .burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
 .burger.active span:nth-child(2) { opacity: 0; }
 .burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ==== Globaler Seiten-Wrapper ==== */
+main.page-container {
+  max-width: 1200px !important;
+  margin: 0 auto !important;
+  padding: 2rem 1rem !important;
+  text-align: center;
+  display: block;
+}
