@@ -29,6 +29,10 @@ app.get("/gallery", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login", { title: "Login" });
 });
+app.get("/contact", (req, res) => {
+  res.render("contact", { title: "Contact" });
+});
+
 
 // Start Server
 app.listen(PORT, () => {
