@@ -485,24 +485,74 @@ main {
 /* ============ Mobile Nav (Burger) ============ */
 .burger { display:none; background:none; border:0; cursor:pointer; padding:.5rem; margin-left:auto; }
 .burger span { display:block; width:24px; height:2px; background:#e5e5e5; margin:5px 0; transition:transform .2s, opacity .2s; }
+/* ============ Mobile Nav (Burger) ============ */
+.burger {
+  display: none;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  padding: .5rem;
+  margin-left: auto;
+}
+
+.burger span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: #e5e5e5;
+  margin: 5px 0;
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Übergang sanfter machen */
+}
+
+/* Burger Animation: Dreht sich zu einem X */
+.burger.active span:nth-child(1) {
+  transform: translateY(7px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg);
+}
+
+.burger.active {
+  background: rgba(255, 255, 255, 0.05); /* optional Hintergrund */
+  border-radius: 4px;
+}
+
 
 /* Mobile Defaults: unter 768px wird Nav zusammenklappbar */
 @media (max-width: 768px) {
   .navbar { gap: .5rem; }
   .burger { display:block; }
+
   .nav-links {
     position: absolute;
-    top: 64px;              /* Höhe der Navbar schätzen */
+    top: 74px; /* Menü etwas tiefer */
     right: 0;
     left: 0;
     background: rgba(20,20,30,.98);
     border-top: 1px solid rgba(255,255,255,.1);
-    display: none;          /* standard: versteckt */
+    display: none; /* standard: versteckt */
     flex-direction: column;
-    padding: 1rem 1.25rem;
+    padding: 1.5rem 1.25rem 1rem; /* oben mehr Abstand */
     gap: 1rem;
+    border-radius: 0 0 10px 10px;
+    z-index: 999;
+
+    /* ✨ Animationseffekte ✨ */
+    transform: translateY(-10px);
+    opacity: 0;
+    transition: transform 0.2s ease, opacity 0.2s ease;
   }
-  .nav-links.open { display: flex; }
+
+  .nav-links.open {
+    display: flex;
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 /* Burger Animation (optional hübsch) */
