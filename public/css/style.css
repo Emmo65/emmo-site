@@ -472,3 +472,13 @@ main {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 255, 247, 0.3);
 }
+
+.privacy-section {
+  max-width: 800px;
+  margin: 3rem auto;
+  padding: 2rem;
+  line-height: 1.6;
+  background: #111;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 247, 0.2);
+}

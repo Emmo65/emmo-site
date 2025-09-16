@@ -38,6 +38,9 @@ app.get("/impressum", (req, res) => {
   res.render("impressum", { title: "Impressum" });
 });
 
+app.get("/datenschutz", (req, res) => {
+  res.render("datenschutz", { title: "Datenschutz" });
+});
 
 
 // Start Server
