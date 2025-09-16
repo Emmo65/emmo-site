@@ -8,21 +8,27 @@
 </head>
 <body>
   <header>
-    <nav class="navbar">
-<div class="logo">
-  <a href="/">
-    <img src="/img/logo.svg" alt="emmo-coding logo" class="logo-img">
-  </a>
-</div>
-      <ul class="nav-links">
-        <li><a href="/" class="<%= title === 'Home' ? 'active' : '' %>">Start</a></li>
-        <li><a href="/project" class="<%= title === 'Projects' ? 'active' : '' %>">Projekte</a></li>
-	<li><a href="/contact" class="<%= title === 'Contact' ? 'active' : '' %>">Kontakt</a></li>
-        <li><a href="/about" class="<%= title === 'About' ? 'active' : '' %>">Über mich</a></li>
-        <li><a href="/gallery" class="<%= title === 'Gallery' ? 'active' : '' %>">Galerie</a></li>
-        <li><a href="/login" class="<%= title === 'Login' ? 'active' : '' %>">Login</a></li>
-      </ul>
-    </nav>
+<nav class="navbar">
+  <div class="logo">
+    <a href="/"><img src="/img/logo.svg" alt="emmo-coding logo" class="logo-img"></a>
+  </div>
+
+  <!-- Burger nur für Mobile -->
+  <button class="burger" aria-label="Menü öffnen" aria-controls="primary-nav" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+
+  <ul id="primary-nav" class="nav-links">
+    <li><a href="/" class="<%= title === 'Home' ? 'active' : '' %>">Start</a></li>
+    <li><a href="/project" class="<%= title === 'Projects' ? 'active' : '' %>">Projekte</a></li>
+    <li><a href="/about" class="<%= title === 'About' ? 'active' : '' %>">Über mich</a></li>
+    <li><a href="/gallery" class="<%= title === 'Gallery' ? 'active' : '' %>">Galerie</a></li>
+    <li><a href="/login" class="<%= title === 'Login' ? 'active' : '' %>">Login</a></li>
+    <li><a href="/contact" class="<%= title === 'Contact' ? 'active' : '' %>">Kontakt</a></li>
+    <li><a href="/impressum" class="<%= title === 'Impressum' ? 'active' : '' %>">Impressum</a></li>
+    <li><a href="/datenschutz" class="<%= title === 'Datenschutz' ? 'active' : '' %>">Datenschutz</a></li>
+  </ul>
+</nav>
   </header>
 
   <main>

@@ -29,3 +29,27 @@ window.addEventListener("click", function (e) {
     modal.style.display = "none";
   }
 });
+// Mobile Burger-Menü
+(function () {
+  const btn = document.querySelector('.burger');
+  const nav = document.getElementById('primary-nav');
+  if (!btn || !nav) return;
+
+  btn.addEventListener('click', () => {
+    const isOpen = nav.classList.toggle('open');
+    btn.classList.toggle('active', isOpen);
+    btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    // optional: Scroll lock bei offenem Menü
+    document.body.style.overflow = isOpen ? 'hidden' : '';
+  });
+
+  // Menü schließen, wenn Link geklickt wird (UX)
+  nav.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => {
+      nav.classList.remove('open');
+      btn.classList.remove('active');
+      btn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    });
+  });
+})();

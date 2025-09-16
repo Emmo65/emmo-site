@@ -482,3 +482,30 @@ main {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0, 255, 247, 0.2);
 }
+/* ============ Mobile Nav (Burger) ============ */
+.burger { display:none; background:none; border:0; cursor:pointer; padding:.5rem; margin-left:auto; }
+.burger span { display:block; width:24px; height:2px; background:#e5e5e5; margin:5px 0; transition:transform .2s, opacity .2s; }
+
+/* Mobile Defaults: unter 768px wird Nav zusammenklappbar */
+@media (max-width: 768px) {
+  .navbar { gap: .5rem; }
+  .burger { display:block; }
+  .nav-links {
+    position: absolute;
+    top: 64px;              /* Höhe der Navbar schätzen */
+    right: 0;
+    left: 0;
+    background: rgba(20,20,30,.98);
+    border-top: 1px solid rgba(255,255,255,.1);
+    display: none;          /* standard: versteckt */
+    flex-direction: column;
+    padding: 1rem 1.25rem;
+    gap: 1rem;
+  }
+  .nav-links.open { display: flex; }
+}
+
+/* Burger Animation (optional hübsch) */
+.burger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.burger.active span:nth-child(2) { opacity: 0; }
+.burger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
