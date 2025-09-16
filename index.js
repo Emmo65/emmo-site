@@ -29,9 +29,15 @@ app.get("/gallery", (req, res) => {
 app.get("/login", (req, res) => {
   res.render("login", { title: "Login" });
 });
+
 app.get("/contact", (req, res) => {
   res.render("contact", { title: "Contact" });
 });
+
+app.get("/impressum", (req, res) => {
+  res.render("impressum", { title: "Impressum" });
+});
+
 
 
 // Start Server
