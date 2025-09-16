@@ -60,12 +60,21 @@ header {
   padding: 1rem 2rem;
 }
 
-.logo {
-  font-size: 1.5rem;
+/* --- Logo oben links --- */
+.logo a {
+  font-size: 1.6rem;
   font-weight: bold;
-  color: var(--accent);
-  text-transform: uppercase;
-  text-shadow: 0 0 10px var(--accent);
+  color: #0ff; /* Neon Cyan */
+  text-decoration: none;
+  letter-spacing: 2px;
+  text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+  transition: all 0.3s ease-in-out;
+}
+
+.logo a:hover {
+  color: #fff;
+  text-shadow: 0 0 8px #0ff, 0 0 20px #0ff, 0 0 40px #0ff;
+  transform: scale(1.05);
 }
 
 .nav-links {
@@ -395,4 +404,15 @@ main {
 
 .login-form button:hover {
   background: white;
+}
+/* --- Logo Styling --- */
+.logo-img {
+  height: 40px;
+  filter: drop-shadow(0 0 5px #0ff);
+  transition: transform 0.2s ease-in-out;
+}
+
+.logo-img:hover {
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 10px #0ff);
 }
