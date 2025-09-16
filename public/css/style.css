@@ -530,7 +530,7 @@ main {
 
   .nav-links {
     position: absolute;
-    top: 74px; /* Menü etwas tiefer */
+    top: 120px; /* Menü etwas tiefer */
     right: 0;
     left: 0;
     background: rgba(20,20,30,.98);
